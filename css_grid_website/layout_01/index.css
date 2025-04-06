@@ -1,0 +1,138 @@
+* {
+	margin: 2px;
+	padding: 0;
+	font-family: 'Lora' Helvetica;
+	font-size: 14px;
+}
+body{
+	background-color: #2C2C2C;
+}
+h1{
+	font-size: 2.5em;
+	color: #A0C878;
+}
+p{
+	font-size: 1.4em;
+	letter-spacing: 4px;
+	color: #A5B68D;
+}
+img{
+	display: block;
+	width: 100%;
+}
+
+.body-container{
+	display: grid;
+	min-height: 350px;
+	width:100%;
+	gap: 20px;
+	grid-template-areas: 
+	'header header header'
+	'header header header'
+	'nav nav list'
+	'content1 content2 content3'
+	'content1 content2 content3'
+	'gallery gallery gallery'
+	'gallery gallery gallery'
+	'about about about'
+	'contact contact contact'
+	'footer footer footer';
+}
+/*Hero/Header*/
+.header{
+	grid-area: header;
+	height: 150px;
+	font-size: 3em;
+	color: #9ACBD0;
+	align-content: center;
+/*	background-image: url(pic/wall.jpg);
+	background-position: center;
+	background-size: cover;*/
+	justify-items: center;
+}
+/*NAV*/
+.nav{
+	grid-area: nav;
+}
+.ulnav{
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+}
+nav > * p {
+	font-size: 1.2em;
+	color: white;
+}
+.text_decor{
+	text-decoration: none;
+}
+/*list*/
+.list{
+	grid-area: list;
+	list-style: none;
+	display: grid;
+	justify-content: end;
+
+}
+.list > * {
+	font-size: 1.2em;
+}
+.subs{
+	border: 1px solid black;
+	border-radius: 30px;
+	text-align: center;
+	color:#FCB454;
+	padding: 8px;
+	cursor: pointer;
+}
+.subs:hover{
+	background-color: darkslategrey;
+}
+/*content*/
+.content1{
+	grid-area: content1;
+	cursor: pointer;
+}
+.content2{
+	grid-area: content2;
+	cursor: pointer;
+}
+.content3{
+	grid-area: content3;
+	cursor: pointer;
+}
+.ct:hover{
+	text-decoration: underline;
+	color:#A4B465;
+}
+/*gallery*/
+.gallery{
+	grid-area: gallery;
+}
+.glr{
+	display: grid;
+	grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+	justify-items: center;
+}
+.glr img {
+	filter:brightness(0.7);
+}
+.img_glr{
+	width: 90%;
+	height: 80%;
+}
+
+/*about*/
+.about{
+	grid-area: about;
+}
+/*contact*/
+.contact{
+	grid-area: contact;
+}
+/*footer*/
+.footer{
+	justify-items: center;
+	grid-area: footer;
+	background-color: #18230F;
+}
