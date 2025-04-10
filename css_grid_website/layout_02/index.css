@@ -1,0 +1,220 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.bora{
+	border: 1px solid black;
+}
+.borb{
+	border:1px solid black;
+	border-radius: 10px;
+}
+body{
+	background-color: #67AE6E;
+}
+.container_2{
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-areas: 
+	'hero hero hero hero'
+	'sect1 sect1 sect1 sect1';
+}
+h1{
+	font-family:'Parkinsans', serif;
+	font-size: 20px;
+	letter-spacing: 3px;
+}
+h2{
+	font-family: 'Parkinsans',monospace;
+	font-size: 16px;
+	letter-spacing: 3px;
+}
+p{
+	font-family: 'Parkinsans',cursive;
+	font-size: 14px;
+	letter-spacing: 3px;
+}
+img{
+	display: block;
+	width: 100%;
+}
+/*grid area*/
+.hero_container{
+	grid-area: hero;
+	min-height: 50vh;
+	color: white;
+}
+.section1_container{
+	grid-area: sect1;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	'nav nav nav nav'
+	'hero_sec hero_sec hero_sec hero_sec'
+	'dict dict dict dict'
+	'artcl artcl artcl artcl'
+	'about about about about'
+	'footer footer footer footer';
+
+	gap:10px;
+	background-color: #113946;
+}
+.hero_sec{
+	grid-area: hero_sec;
+	border-radius: 10px;
+}
+.dict{
+	grid-area: dict;
+	display: flex;
+	flex-direction: column;
+}
+.artcl{
+	grid-area: artcl;
+}
+.about{
+	grid-area: about;
+}
+.flex_hero{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-around;
+	height:100%;
+}
+/**/
+.nav_container{
+	grid-area: nav;	
+	margin-bottom: 10px;
+	margin-top: 5px;	
+}
+.ulnav{
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.anav{
+	text-decoration: none;
+	color: white;
+	font-size: 1.3em;
+	background-color: #67AE6E;
+	border-radius: 10px;
+	padding:0 8px 0px 8px;
+/*	CHANGE LATER UP UP*/
+}
+.anav:hover{
+	background-color: #345e39;
+	color: grey;
+}
+.rotatext{
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+.menu_card{
+	display: flex;
+	margin: 10px;
+}
+footer{
+	grid-area: footer;
+	text-align: center;
+	background-color:#67AE6E ;
+}
+.menu_card img{
+	max-width: 70px;
+}
+.card_list{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.infocard{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background-color: black;
+	color: white;
+}
+.hero_a h2{
+	font-size: 5em;
+}
+.article_text p{
+	text-align: justify;
+	padding: 10px;
+	letter-spacing: 1px;
+	line-height: 25px;
+}
+
+.opacity{
+	filter: opacity(80%);
+}
+.circle{
+	border-radius: 50px 0px 0px 50px;
+}
+.small{
+	height: 120px;
+	width: 70px;
+	background-size: cover;
+}
+
+.plist{
+	font-size: 1em	;
+	font-family: 'Parkinsans';
+}
+.plist:hover{
+	color: white;
+
+}
+
+@media screen and (min-width:940px){
+	.plist{
+		font-size: 3em;
+	}
+}
+	
+@media screen and (min-width:630px){
+	.plist{
+		font-size: 2.5em;
+	}
+	.menu_card img{
+	max-width: 150px;
+}		
+.section1_container{
+	grid-area: sect1;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	'nav nav nav nav'
+	'hero_sec hero_sec hero_sec hero_sec'
+	'dict dict dict dict'
+	'artcl artcl artcl artcl'
+	'about about about about'
+	'footer footer footer footer';
+
+	gap:10px;
+	background-color: #113946;
+
+}
+
+@media screen and (min-width:455px){
+	.menu_card img{
+	max-width: 100px;
+}
+}
+@media screen and (min-width:950{
+	.section1_container{
+	grid-area: sect1;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	'nav nav nav nav'
+	'hero_sec hero_sec hero_sec hero_sec'
+	'dict dict dict dict'
+	'artcl artcl about about'
+	'footer footer footer footer';
+	gap:10px;
+	background-color: #113946;
+}
+}
+	
+}
